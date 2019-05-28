@@ -1,0 +1,55 @@
+{% extends 'sobre-nav.html' %}
+{% load staticfiles %}  
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/sobre.css' %}">
+{% endblock %}
+{% block scripts %}{% endblock %}
+
+
+{% block content %}
+    <section id="principalSobre">
+            <div>
+                <h4 class="titulo">Quem somos</h4>
+            </div>
+            <div class="a-gente"> 
+                <div class="pessoa"> 
+                    <img class="circle" src="../static/images/sobre/vitor.jpg"> 
+                    <h4>Carlos Vitor</h4>
+                   <h5>21 anos</h5>
+                    <p>Apaixonado por inovação, cerveja, games e tecnologia. Curioso e sempre se desafiando como pessoa e profissional.
+                    </p>
+                </div>
+                <div class="pessoa"> 
+                    <img class="circle" src="../static/images/sobre/leandro.jpg"> 
+                    <h4>Leandro </h4>
+                   <h5>24 anos</h5>
+                   <div class="txt">
+
+                       <p>
+                        Analista de Sistemas e Desenvolvedor Web Full Stack na empresa Koran. Apaixonado por Aprender e Ensinar, Músico nas horas vagas.                        
+                       </p>
+                   </div>
+                </div>
+                <div class="pessoa"> 
+                    <img class="circle" src="../static/images/sobre/diva.jpg"> 
+                    <h4>Natália Valentin</h4>
+                   <h5>24 anos</h5>
+                   <div class="txt">
+                       <p>Formada em Publicidade e desenvolvedora front-end da BORA - Apaixonada por vinhos e Star Wars.</p>
+                   </div>
+                </div>
+                <div class="pessoa"> 
+                    <img class="circle" src="../static/images/sobre/nath.jpg"> 
+                    <h4>Nathalia Spinula</h4>
+                    <h5>19 anos</h5>
+                    <p>Full Stack Developer e Estudante de Sistemas de Informação - Apaixonada por desenvolvimento, design e inovação.</p>
+                </div>
+                <div > 
+                    <img  class="circle" src="../static/images/sobre/matheus7.png"> 
+                   <h4>Matheus Mastrocinque</h4>
+                   <h5>21 anos</h5>
+                    <p>Desenvolvedor Web e Estudante de Análise e Desenvolvimento de Sistemas - Apaixonado por tecnologia e cerveja.</p>
+                </div>
+            </div>
+    </section>
+{% endblock %}

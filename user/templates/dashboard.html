@@ -1,0 +1,31 @@
+{% extends 'base_logado.html' %}
+{% load staticfiles %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+{% endblock %}
+{% block content %} 
+<section>
+    <div id="dashDados">
+        <h2>Ei, {{ user.first_name }} {{ user.last_name }}!</h2>
+        <h4>Aqui estão seus dados pessoais e interesses.</h4>  
+        <p>E-mail: {{ user.email }}</p>    
+        <p>Celular: {{  profile.cellphone }}</p>    
+        <p>Data Nascimento: {{ profile.birthday }}</p>    
+         
+        <h3>Interesses</h3>
+        <ul>    
+            {% for interesse in interesses %}       
+            <li>{{ interesse }}</li>
+            {% endfor %}                 
+        </ul>                  
+    </div>
+    <div id="dashLocalizacao">                
+        <img src="{% static '/images/sugestoes/place.png' %}" alt="">
+        <article>
+            <h3>Sua localização agora:</h3>
+            <p>Estação Hack - Trianon Masp</p>
+        </article>             
+    </div>       
+</section>  
+{% endblock %}     

@@ -1,0 +1,302 @@
+body{
+    margin: 0;  
+}
+
+label{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Lalezar', cursive;
+    color: white;
+    font-size: 28pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h2{
+    text-align: center;
+    color: #ee3f60; 
+    margin: 0;
+    font-family: 'Raleway';
+    margin-top: 20px; 
+}
+
+section{
+    display: flex;
+    flex-flow: wrap;    
+    justify-content: space-around;
+}
+
+section article{
+    background-color: white;
+    width: 25%;
+    display: flex;
+}
+
+section div{
+    background-color: white;
+    width: 50%;
+    display: flex;
+}
+
+section form {
+    width: 100%; 
+    height: 100%;  
+    background-color: black;
+}
+
+section form ul li label{
+    font-size: 20pt;
+}
+
+#id_choices{
+    display: flex;
+    display: flex;
+    flex-flow: wrap;   
+    justify-content: space-around;
+    margin: 0;
+    padding:0;
+}
+
+#btn-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#id_choices li{
+    list-style-type: none;
+    width: 25%;
+    height: 250px; 
+    display: flex;
+    color: white;
+    display:none;    
+}
+
+#id_choices input[type=checkbox] {
+    display:none;
+}
+
+.diversao{
+    margin: 0px;
+    background-image: url('/static/images/interesses/diversao.png');
+    background-size:cover;
+    display: flex;
+}
+
+.tecnologia{
+    margin: 0px;
+    background-image: url('/static/images/interesses/tecnologia.png');
+    background-size:cover;
+    display: flex;
+}
+
+.bonsDrinks{
+    margin: 0px;
+    background-image: url('/static/images/interesses/bonsDrinks.png');
+    background-size:cover;
+    display: flex;
+}
+
+input[type=checkbox]:checked ~ .active {
+	background-color: red;
+}
+
+.fundoPopup{
+    background-color: rgba(0, 0, 0, 0.63);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+    display: flex;
+}
+
+.popup{
+    position: fixed;
+    border-radius: 25px;
+    width: 480px;
+    height: 350px;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    padding: 15px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+#ana{
+    color: #ee3f60; 
+    margin: 0;
+    font-family: 'Raleway';
+    padding-top: 10px;
+}
+
+#txtAna{
+    color: gray;
+    font-size: 17px;
+    font-family: 'Raleway';
+    margin: 0;
+    text-align: center;
+}
+
+.txtAna{
+    width: 380px;
+    margin: 0;
+}
+
+#ana{
+    font-size: 20pt;
+}
+
+.logoColorido{
+    width: 250px;
+    height: 100px;
+    padding-top: 10px;
+}
+
+section div img{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#btnCadastrar{
+    width: 100%;
+    height: 60px;
+    font-size: 17pt;
+    box-shadow: none;
+    font-family:'Lalezar', cursive;
+    color: antiquewhite;
+    background-image: linear-gradient(to right, #ee3f60 0%, #ee3f60 46%, #f26e57  100%);
+}
+
+#btnPopup{
+    width: 200px;
+    height: 60px;
+    font-size: 17pt;
+    box-shadow: none;
+    font-family:'Lalezar', cursive;
+    color: antiquewhite;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #ee3f60 0%, #ee3f60 46%, #f26e57  100%);
+}
+
+.botao{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.botao2{
+    padding-top: 30px;
+    display: none;
+    justify-content: center;
+}
+
+.verBotao {
+    display: flex;
+}
+
+/* Tamanho Tablet */
+@media(max-width:981px){
+    section div{
+        width: 50%;
+        display: flex;
+    }
+    #btnPopup{
+        width: 200px;
+    }
+}
+
+/* Tamanho Ipad Pro */
+@media(max-width:1024px){
+    section div{
+        width: 50%;
+        display: flex;
+    }
+}
+
+/* Tamanho Iphone*/
+@media(max-width:545px){
+    section div{
+        width: 50%;
+        display: flex;
+    }
+    
+    .popup{
+        position: fixed;
+        border-radius: 25px;
+        width: 300px;
+        height: 350px;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        padding: 15px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .txtAna{
+        width:300px;
+    }  
+}
+
+/* Tamanho Tablet */
+@media(max-width:768px){
+    #id_choices li{
+        width: 50%;
+        height: 242px; 
+    }
+    
+    section form ul li label {
+        font-size: 16pt;
+    }     
+}
+
+/* Tamanho Smartphone */
+@media(max-width:425px){   
+    #id_choices li{
+        width: 50%;
+        height: 162px; 
+    }
+    
+    section form ul li label {
+        font-size: 12pt;
+    }
+
+    #btnPopup{
+        width: 200px;
+        height: 60px;
+        font-size: 17pt;     
+    }
+
+    .popup{      
+        width: 80%;  
+        height: 340px;
+        
+    }
+
+    .txtAna{
+        width: 100%;
+    }
+    
+    #txtAna {
+        font-size: 11pt;
+    }
+
+    .logoColorido img{
+        width: 90%;
+        height: 80px;
+        align-items: center;
+    }
+}

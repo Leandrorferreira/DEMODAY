@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+}
+
+nav{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: linear-gradient(to right, #ee3f60 0%, #ee3f60 46%, #f26e57  100%);
+}
+
+nav div{
+    display: flex;
+    margin: 6vw;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+nav div ul{
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+nav div ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav div ul {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav div {
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 425px) {
+    nav div {
+        align-items: center;
+        justify-content: space-around;
+    }
+}

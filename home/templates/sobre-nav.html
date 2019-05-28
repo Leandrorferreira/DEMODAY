@@ -1,0 +1,104 @@
+{% load staticfiles %}  
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static '/images/logo/borafaviconf.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Bora!</title>
+    {% block links %}{% endblock %}
+	{% block scripts %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div id="navPrincipal">
+            <nav>
+                <a href="#" id="logoMobile">
+                    <img src="{% static '/images/logo/bora.png' %}" alt="Logo Bora!">
+                </a>
+                <ul>
+                    <li>
+                        <div id="tamanho">
+                            <a href=#>
+                                <img src="{% static '/images/logo/bora.png' %}" alt="Logo Bora!">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="tamanho">
+                            <a id="cFunciona" href="{% url 'home:index' %}">
+                                Como Funciona
+                            </a>
+                        </div> 
+                    </li>
+                    <li>
+                        <div id="tamanho">
+                            <a id="inscrever" href="{% url 'user:reg' %}">
+                                Inscrever-se
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="tamanho">
+                            <a id="contato" href="{% url 'home:contato' %}">
+                                Contato
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="tamanho">
+                            <a id="sobre" href="{% url 'home:sobre' %}">
+                                Sobre nós
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <article id="login">
+                            <div id="tamanhoBotao">
+                                <a id="botaologin" href="{%url 'user:login' %}">Entrar</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="menuHamburguer">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="spaceInicial">
+            
+        </div>
+        <div id="apresentInicial">
+            <h1 id="tituloInicial">Bora pr<span></span></h1>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div id="footerLinks">
+            <img id="bora" src="{% static '/images/logo/bora.png' %}" alt="">
+            <div id="links">
+            <a href="{% url 'home:notfound' %}">Termos e Privacidade</a>
+            <a href="{% url 'home:contato' %}">Contato</a>
+            <p id="copyright">© 2019 Bora Rolês Ltda</p>
+            </div>
+            <div id="redesSocias">
+                    <div id="icons">  
+                        <div class="image"><a href=""><img src="{% static '/images/footer/facebook.png' %}" alt=""></a></div>
+                        <div class="image"><a href=""><img src="{% static '/images/footer/linkedin.png' %}" alt=""></a></div>
+                        <div class="image"><a href=""><img src="{% static '/images/footer/twitter.png' %}" alt=""></a></div>
+                        <div class="image"><a href=""><img src="{% static '/images/footer/instagram.png' %}" alt=""></a></div>
+                    </div>
+            <p>Redes Socias</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+#filtro {
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0,0,0, .5), rgba(240, 0, 112, 0.5), rgba(240, 0, 112, 0.5));
+}
+
+form{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 60%;
+    width: 50%;
+}
+
+form a{
+    text-decoration: none;
+    color:white;
+    width: 130px;
+    text-align: center;
+}
+
+form button{
+    width: 130px;
+    height: 35px;
+    background-color: #ee3f60;      
+    border-radius: 20px;
+    border: white solid 2px;
+}
+
+form button a{
+    text-decoration: none;; 
+    color: white;   
+}
+
+form button:hover {
+    font-size: 20px; 
+    cursor: pointer; 
+}
+
+form div {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    color: white; 
+}
+
+form div:nth-child(5) a{
+    font-size: 12pt;
+}
+
+form img{
+    width: 180px;
+}
+
+form input {
+    height: 24px;
+    font-size: 12pt;
+    border-radius: 5px;
+    border: white solid 2px;
+}
+
+section {    
+    height: 90vh;
+    font-family: 'Raleway', sans-serif;
+    background-image: url("/static/images/cadastro/pexels-photo-1267708.jpeg");
+    background-size: cover; 
+}
+
+section article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tamanho Tablet */
+@media(max-width:768px){ 
+    form{
+        width:60%;
+    }
+
+    form a, button{
+        width: 100px;
+    }    
+
+    form div {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: white; 
+    }
+    
+    form div:nth-child(5) a{
+        font-size: 12pt;
+    }
+
+    form input{
+        width: 80%;
+    }
+}
+
+/* Tamanho Smartphone */
+@media(max-width:425px){
+    form{
+        width:100%;
+        height: 80%;
+    }
+
+    form a{
+        font-size: 8pt;
+    }
+
+    form a, button{
+        width: 70px;
+    }  
+
+    form div:nth-child(5){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: white; 
+    }
+
+    form div:nth-child(5) a{
+        font-size: 10pt;
+        width: 300px;
+    }
+}

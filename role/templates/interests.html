@@ -1,0 +1,50 @@
+{% extends 'base_logado.html' %}
+{% load staticfiles %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/interests.css' %}"> 
+{% endblock %}
+{% block scripts %}
+<script defer src="{% static 'js/interesses.js' %}"></script>
+<script defer src="{% static 'js/saveInterests.js' %}"></script>
+{% endblock %}
+{% block content %}
+<div class="fundoPopup">
+    .
+</div>
+<section>
+    <article class="popup">
+        <div class="logoColorido">
+            <img src="/static/images/interesses/logoColorido.png" alt="">
+        </div>
+        {% if msg %}
+        <h2>{{ msg }}</h2> 
+        <div class="botao">
+            <a href="{% url 'role:user_options' %}">
+                <button id="btnPopup">CONTINUAR</button>
+            </a>
+        </div>      
+        {% else %}  
+        <p id="ana">Olá, {{ user.username }}!</p>
+        <div class="txtAna">
+            <p id="txtAna">Agora precisamos conhecer você melhor. Selecione algumas categorias de rolê para começar.</p>
+        </div>
+        <div class="botao">
+            <button id="btnPopup">BORA</button>
+        </div>
+        <div class="botao2">
+            <a href="{% url 'home:index' %"}>
+                <button>BORA</button>
+            </a>
+        </div>           
+        {% endif %}        
+    </article>
+    <form method='POST' >       
+        {% csrf_token %}
+        {% for field in form %} 
+        {{ field }}         
+        {% endfor %}        
+        <button type='submit' id="btnCadastrar">Cadastrar</button>                    
+    </form>
+</section>
+{% endblock %}

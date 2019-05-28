@@ -1,0 +1,160 @@
+#container { 
+    width:100%;
+    height:100%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container h3{
+    text-align: center;
+    color: white;
+    font-size: 24pt;
+    font-family: 'Segoe UI';
+    height: 10%;
+    margin: 0px;
+}
+
+#container form{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 84%;
+    width: 50%;
+    background-color: #57585b;
+    border-radius: 20px;
+}
+
+#container form a{
+    text-decoration: none;
+    color:white;
+    width: 130px;
+    text-align: center;
+}
+
+#container form button{
+    width: 130px;
+    height: 35px;
+    background-color: #ee3f60;      
+    border-radius: 20px;
+    border: white solid 2px;
+    color: white;   
+}
+
+#container form button:hover {
+    font-size: 20px; 
+    cursor: pointer; 
+}
+
+#container form div {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    color: white; 
+}
+
+#container form div:nth-child(5) a{
+    font-size: 12pt;
+}
+
+#container form label{
+    color: white;
+    width: 50%;
+}
+
+#container form img{
+    width: 180px;
+}
+
+#container form input, select {
+    width: 50%;
+    height: 24px;
+    font-size: 12pt;
+    border-radius: 5px;
+    border: white solid 2px;
+}
+
+#container form ul{
+    color: white;
+    list-style-type: none;
+    text-align: center;
+}
+
+section {    
+    height: 90vh;
+    font-family: 'Raleway', sans-serif;
+    background-size: cover; 
+}
+
+section article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d2f33;
+}
+
+/* Tamanho Tablet */
+@media(max-width:768px){ 
+    #container form{
+        width:60%;
+    }
+    
+    #container form button{
+        width: 100px;
+    }    
+    
+    #container form div {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: white; 
+    }
+    
+    #container form div:nth-child(5) a{
+        font-size: 12pt;
+    }
+        
+    #container form label{
+        width: 80%;
+    }
+
+    #container form input, select{
+        width: 80%;
+    }
+}
+
+/* Tamanho Smartphone */
+@media(max-width:425px){
+    #container h3{
+        font-size: 18pt;
+    }
+
+    #container form{
+        width:90%;
+        height: 92%;
+    }
+    
+    #container form a{
+        font-size: 8pt;
+    }
+    
+    #container form a, button{
+        width: 70px;
+    }  
+    
+    #container form div:nth-child(5){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: white; 
+    }
+    
+    #container form div:nth-child(5) a{
+        font-size: 10pt;
+        width: 300px;
+    }    
+}

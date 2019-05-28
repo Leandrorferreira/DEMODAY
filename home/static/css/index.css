@@ -1,0 +1,752 @@
+html {	
+    scroll-behavior: smooth;	
+}	
+
+ body {	
+    margin: 0;	
+    display: grid;	
+    grid-template-areas: 	
+    'header header'	
+    'aside article'	
+    'aside article'	
+    'section section'	
+    'footer footer';	
+    grid-template-rows:  100vh 50vh 60vh 110vh 20vh;	
+    grid-template-columns: 49vw 49.7vw;   	
+}	
+
+ /* Header (nav, imagem principal) */	
+
+ .menuHamburguer {	
+    display: none;	
+}	
+
+ .menuFixo {	
+    position: fixed;	
+    top: 0px;	
+    width: 100%;	
+    height: auto;	
+    background-image: linear-gradient(to right, #ee3f60 0%, #ee3f60 46%, #f26e57  100%);	
+}	
+
+ .botaoFixo {	
+    padding: 10px;	
+    text-align: center;	
+    border-radius: 20px;	
+    background: #f26e57;	
+    border: white solid 2px;	
+    color: white;	
+}	
+
+ header {	
+    grid-area: header;	
+    display: flex;	
+    flex-direction: column;	
+    justify-content: space-between;	
+    background-image: url("/static/images/home/header.png");	
+    background-repeat: no-repeat;	
+    background-size: 100%;	
+    font-family: 'Raleway', sans-serif;	
+}	
+
+ header .fa-bars {	
+    color: white;	
+}	
+
+ #logoMobile {  	
+    display: none;	
+}	
+
+ header a img {  	
+    width: 115px;	
+}	
+
+ header nav ul {	
+    display: flex; 	
+    justify-content: space-around;	
+    align-items: center;	
+    list-style-type: none;	
+}	
+
+ header a {	
+    text-decoration: none;	
+    color: white;	
+}	
+
+ header a:hover {	
+    font-size: 20px;	
+}	
+
+ header div nav article {	
+    padding: 10px;	
+    text-align: center;	
+    border-radius: 18px;	
+    background-image: linear-gradient(to right, #ee3f60 0%, #ee3f60 46%, #f26e57  100%);	
+    color: white;	
+}	
+
+ #apresentInicial {	
+    margin: 0;	
+    display: flex;	
+    flex-direction: column;	
+    justify-content: center;	
+    align-items: center;
+    margin-bottom: auto;
+}
+
+#spaceInicial {
+    margin: 0;	
+    display: flex;	
+    flex-direction: column;	
+    justify-content: center;	
+    height: 25vh;
+}
+
+ #botaologin:hover {	
+    font-size: 18px;	
+}	
+
+ #cFunciona:hover {	
+    font-size: 20px;	
+}	
+
+ #contato:hover {	
+    font-size: 20px;	
+}	
+
+ #inscrever:hover {	
+    font-size: 20px;	
+}
+
+#navPrincipal {
+    width: 100%;
+}
+
+ #sobre:hover {	
+    font-size: 20px;	
+}	
+
+ #tamanho {	
+    width: 200px;	
+}	
+
+ #tamanhoBotao {	
+    width: 80px;	
+}	
+
+ #tituloInicial {	
+    font-size: 58pt;	
+    color: white;	
+    letter-spacing: -3px;	
+    margin: 5px;	
+    animation: alternate;	
+}	
+
+ span:before {	
+    content: 'a onde hoje?';	
+    animation: animate infinite 10s;	
+    animation-delay: 2s;	
+}	
+
+ @keyframes animate {	
+    20%{ content: 'a onde hoje?' }	
+    30%{ content: 'o bar?' }	
+    50%{ content: 'o restaurante?' }	
+    75%{ content: 'o teatro?' }	
+    100%{ content: 'a onde você quiser!' }	
+}	
+
+ #sublinhado {	
+    width: 45%;	
+    height: 7px;	
+    background-color: #ff1742;	
+}	
+
+ header main input {	
+    background-color: #ffffff42;	
+    border: #ee3f60 solid 2px;	
+    border-radius: 20px;    	
+    width: 35%;	
+    color: white;	
+    height: 40px;	
+    font-size: 20px;	
+    outline: none;	
+    text-align: center;	
+    font-family: 'Raleway', sans-serif;	
+}	
+
+ header main input::-webkit-input-placeholder {	
+    color: white;	
+}	
+
+ header main input:-moz-placeholder { /* Firefox 18- */	
+    color: white;  	
+}	
+
+ header main input::-moz-placeholder {  /* Firefox 19+ */	
+    color: white;  	
+}	
+
+ header main input:-ms-input-placeholder {  	
+    color: white;  	
+}	
+
+ /* Fim Header */	
+/* ARTICLE, ASIDE - Como Funciona */	
+
+ #comoFunciona{	
+    grid-area: article;	
+    background-color: white;	
+    font-family: 'Raleway', sans-serif;	
+    width: 100%;	
+    height: 100%;	
+    display: flex;	
+    align-items: center;	
+    padding-top: 13%;	
+}	
+
+ #comoFunciona div{	
+    height: 80%;	
+    width: 100%;	
+    display: flex;	
+    flex-direction: column;	
+    justify-content: center;	
+    align-items: center;	
+}	
+
+ #comoFunciona div div:nth-child(4) {	
+    display: flex;	
+    flex-direction: row;	
+    width: 70%;	
+    justify-content:space-between;	
+    align-items: flex-start;    	
+}	
+
+ #comoFunciona div div:nth-child(4) div {     	
+    display: flex; 	
+    width: 100px;  	
+    flex-direction: column;	
+    justify-content:flex-start;	
+    align-items: center;    	
+}	
+
+ #comoFunciona div div:nth-child(4) div img{	
+    width: 90px;	
+    height: 90px;    	
+}	
+
+ #comoFunciona div div:nth-child(4) div p {	
+    width: 119px;	
+    height: 20px;	
+    font-size: 13pt;	
+    text-align: center;	
+    color: #ee3f60;	
+    font-family: 'Baloo Bhai', cursive;	
+    line-height: 19px;	
+}	
+
+ #comoFunciona div p {	
+    width: 70%;	
+    height: 38%;	
+    text-align: left;	
+    line-height: 23px;	
+    color: rgb(10, 8, 8);	
+}	
+
+ #comoFunciona div h2{	
+    color: #ee3f60;	
+    font-size: 40pt;	
+    font-weight: normal;	
+    line-height: 43px;    	
+    font-family: 'Baloo Bhai', cursive;   	
+    margin: 0;  	
+    text-align: left;	
+    width: 70%;	
+    height: 15%;	
+}	
+
+ #comoFunciona div h3{	
+    font-weight: inherit;  	
+    color: rgb(10, 8, 8);  	
+    text-align: left;	
+    width: 70%;	
+    height: 5%;	
+}	
+
+ aside {	
+    grid-area: aside;  	
+    display: flex; 	
+    align-items: center;	
+    justify-content: center;	
+    padding-top: 13%;	
+}	
+
+ aside img{	
+    width: 80%;	
+    height: 84%;	
+}	
+
+ /* Fim Como Funciona*/	
+/* Inscreva-se */	
+
+ section {	
+    grid-area: section; 	
+    background-image: url("/static/images/cadastro/pexels-photo-1267708.jpeg");	
+    background-size: cover;	
+    display: flex; 	
+}	
+
+ .filtro { 	
+    width:100%;	
+    height:100%;	
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0,0,0, .5), rgba(240, 0, 112, 0.5));	
+}	
+
+ section div {	
+    display: flex;	
+    flex-direction: column;	
+    justify-content: center;	
+    align-items: center;	
+    color: white;	
+    width: 100%;	
+}	
+
+ section img{	
+    width: 300px;	
+    padding-bottom: 30px;	
+}	
+
+ .button1 {	
+    padding: 0.8em 0em;	
+    width: 500px;	
+    background: #ff1742;	
+    border-radius: 50px;	
+    border: 0;	
+    color:#fff;	
+    font-size: 16pt;	
+    font-family: 'Raleway', sans-serif;	
+    font-weight: bold;	
+    cursor: pointer;	
+    margin: 1em 2em;	
+    text-transform: uppercase;	
+}	
+
+ .button2 {	
+    padding: 0.8em 0em;	
+    width: 500px;	
+    background: #0b68ff;	
+    border-radius: 50px;	
+    border: 0;	
+    color:#fff;	
+    font-size: 16pt;	
+    font-family: 'Raleway', sans-serif;	
+    font-weight: bold;	
+    cursor: pointer;	
+    margin: 1em 2em;	
+    text-transform: uppercase;	
+}	
+
+ footer{	
+    grid-area: footer;	
+    display: flex;	
+    flex-direction: column;	
+    justify-content: space-around;	
+    align-items: center;	
+    background-color: black;	
+    color: darkgray;	
+    font-family: 'Raleway', sans-serif;	
+}	
+
+ #bora{	
+    margin-top: 5vh;	
+    height: 40px;	
+    width: 115px;	
+}	
+
+ footer a{	
+    margin-top: 2.5vh;	
+    height: 1vh;	
+    text-decoration: none;	
+    font-size: 10pt;	
+    color: darkgray;	
+}	
+
+ #footerLinks{	
+    display: flex;	
+    justify-content: space-around;	
+    width: 100%;	
+}	
+
+ #links{	
+    height: 20vh;	
+    display: flex;	
+    flex-direction: column;	
+    align-items: center;	
+    justify-content: space-around;	
+}	
+
+ #copyright{	
+font-size: 8pt;	
+}	
+
+ #redesSocias{	
+    display: flex;	
+    flex-direction: column;	
+    justify-content: flex-start;	
+    align-items: center;	
+    margin-top: 4vh;	
+    width: 20vw;	
+    height: 50px;	
+
+ }	
+
+ #redesSocias .image{	
+    border-radius: 50%;	
+    height: 45px;	
+    width: 45px;	
+    background-color: rgba(0, 0, 0, 0.5);	
+}	
+
+ #redesSocias img{	
+    margin-left: 5px;	
+    margin-top: 5px;	
+    padding: 0;	
+    border: 0;	
+    width: 35px;	
+}	
+
+ #links :hover{	
+    text-decoration: underline;	
+}	
+
+ #redesSocias img:hover{	
+    background-color: gray;	
+    border-radius: 50px;	
+}	
+
+ #icons{	
+    display: flex;	
+}	
+
+ /* Tamanho Tablet */	
+@media(max-width:768px){	
+    body {	
+        grid-template-areas: 	
+        'header header'	
+        'article article'	
+        'article article'	
+        'section section'	
+        'footer footer';	
+        grid-template-rows: 100vh 50vh 48vh 80vh 20vh;    	
+        grid-template-columns: 49vw 51vw;   	
+    }	
+
+     #logoMobile {	
+        display: flex;
+        width: 116px;
+        height: 40px;
+    }	
+
+     .abrirMenu {	
+        display: flex;	
+        flex-direction: column;        	
+        -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */	
+        transition: width 2s;	
+        align-items: flex-end;	
+        background-color: #00000061;	
+        width: 100%;	
+        padding: 10px;	
+    }   	
+
+     .aparecerBotao {	
+        display: flex !important;	
+    }	
+
+     #tituloInicial {	
+        font-size: 44pt;	
+    }	
+
+     .menuHamburguer {	
+        display: flex;	
+        cursor: pointer;	
+    }	
+
+     .menuFixo {	
+        padding: 0px;	
+    }	
+
+     header {	
+        display: flex;	
+        flex-direction: column;	
+        justify-content: space-around;	
+        background-image: url("/static/images/home/headerMobile.png");	
+    }	
+
+
+     header nav {	
+        display: flex;
+        align-items: center;	
+        justify-content: space-around;	
+
+     }	
+
+     header nav ul {	
+        display: flex;	
+        flex-direction: column-reverse;	
+        align-items: flex-start;	
+    }	
+
+     #botaologin:hover {	
+        font-size: 16px;	
+    }	
+
+     #cFunciona:hover {	
+        font-size: 16px;	
+    }	
+
+     #contato:hover {	
+        font-size: 16px;	
+    }	
+
+     #inscrever:hover {	
+        font-size: 16px;	
+    }	
+
+     #sobre:hover {	
+        font-size: 16px;	
+    }	
+
+     #tamanho {	
+        width: 100px;	
+        display: flex;	
+        align-items: flex-end;	
+    }	
+
+     #tamanhoBotao {	
+        width: 50px;	
+        display: flex;	
+        align-items: flex-end;	
+    }	
+
+
+     header nav ul li {	
+        padding: 5px 0px 5px 0px;	
+    }	
+
+     header nav ul li:nth-child(2),	
+    header nav ul li:nth-child(3),	
+    header nav ul li:nth-child(4),	
+    header nav ul li:nth-child(5),	
+    header nav ul li:nth-child(6) {	
+        display: none;	
+    }	
+
+
+     header nav ul li img {	
+        display: none;	
+    }	
+
+     header main {	
+        display: flex;	
+        justify-content: space-between;	
+        flex-direction: column;	
+        align-items: center;	
+    }	
+
+     header main h1 {	
+        font-size: 35pt;	
+    }	
+
+     header main input {	
+        width: 70%;	
+    }	
+
+     aside {	
+        display: none;	
+    }	
+
+     #comoFunciona div h2{	
+        text-align: center;	
+        width: 100%;	
+    }	
+
+     #comoFunciona div h3{	
+        text-align: center;	
+        width: 100%;	
+    }	
+
+     #comoFunciona div p{	
+        text-align: justify;	
+        line-height: 17px;	
+    }	
+
+     #comoFunciona div div:nth-child(4) {	
+        width: 70%; 	
+    }	
+
+     .button1 {	
+        padding: 0.8em 0em;	
+        width: 350px;	
+        background: #0077ff;	
+        border-radius: 50px;	
+        border: 0;	
+        color:#fff;	
+        font-size: 10pt;	
+        font-family: 'Raleway', sans-serif;	
+        font-weight: bold;	
+        cursor: pointer;	
+        margin: 1em 2em;	
+        text-transform: uppercase;	
+    }	
+
+     .button2 {	
+        padding: 0.8em 0em;	
+        width: 350px;	
+        background: #f80000;	
+        border-radius: 50px;	
+        border: 0;	
+        color:#fff;	
+        font-size: 10pt;	
+        font-family: 'Raleway', sans-serif;	
+        font-weight: bold;	
+        cursor: pointer;	
+        margin: 1em 2em;	
+        text-transform: uppercase;	
+    }	
+
+     .boraInscreva {	
+        width: 200px;	
+    }	
+
+ }	
+
+ /* Tamanho Smartphone */	
+@media(max-width:425px){	
+    body{	
+        grid-template-areas: 	
+        'header header'	
+        'article article'	
+        'article article'	
+        'article article'	
+        'section section'	
+        'footer footer';	
+        grid-template-rows: 76vh 50vh 40vh 40vh 30vh 20vh;    	
+        grid-template-columns: 49vw 49.7vw;   	
+    }	
+
+     header {	
+        display: flex;	
+        flex-direction: column;	
+        justify-content: space-around;	
+        background-image: url("/static/images/home/headerMobile.png");	
+    }	
+
+     #tituloInicial {	
+        font-size: 26pt;	
+    }	
+
+
+     #comoFunciona div {	
+        width: 100%;	
+    }	
+
+     #comoFunciona div h2{	
+        font-size: 30pt;	
+        height: 15%;	
+    }	
+
+     #comoFunciona div  h3{	
+        font-size: 12pt;      	
+        height: 2%;	
+        margin:0;	
+    }	
+
+     #comoFunciona div p{	
+        display: none;	
+    }	
+
+     #comoFunciona div div:nth-child(4){	
+        width: 100%;	
+        height: 89%;	
+        flex-direction: column;	
+    }	
+
+     #comoFunciona div div:nth-child(4) div {     	
+        width: 100%; 	
+        height: 33%;	
+        justify-content: center;	
+    }	
+
+     #comoFunciona div div:nth-child(4) div img {           	
+        height: 53%;	
+        width: 25%;        	
+    }	
+
+     #comoFunciona div div:nth-child(4) div p {           	
+        height: 10%;     	
+        display: block;	
+        margin: 0%; 	
+    }	
+
+     .button1 {	
+        padding: 0.8em 0em;	
+        width: 225px;	
+        background: #0077ff;	
+        border-radius: 50px;	
+        border: 0;	
+        color:#fff;	
+        font-size: 6pt;	
+        font-family: 'Raleway', sans-serif;	
+        font-weight: bold;	
+        cursor: pointer;	
+        margin: 1em 2em;	
+        text-transform: uppercase;	
+    }	
+
+    .button1:focus {
+        outline:none;
+    }
+    
+    .button2:focus {
+        outline:none;
+       }
+
+     .button2 {	
+        padding: 0.8em 0em;	
+        width: 225px;	
+        background: #f80000;	
+        border-radius: 50px;	
+        border: 0;	
+        color:#fff;	
+        font-size: 6pt;	
+        font-family: 'Raleway', sans-serif;	
+        font-weight: bold;	
+        cursor: pointer;	
+        margin: 1em 2em;	
+        text-transform: uppercase;	
+    }	
+
+     .boraInscreva {	
+        width: 120px;	
+    }	
+
+     footer{	
+        height: 60vh;	
+    }	
+
+     #footerLinks{	
+        display: flex;	
+        flex-direction: column;	
+        align-items: center;	
+        justify-content: space-around;	
+        width: 100%;	
+        height: 40vh;	
+    }	
+
+     #redesSocias p{	
+        display: none;	
+    }	
+
+ }
+
+

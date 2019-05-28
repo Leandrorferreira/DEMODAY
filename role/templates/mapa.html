@@ -1,0 +1,25 @@
+{% extends 'base_logado.html' %}
+{% load staticfiles %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/mapa.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
+{% endblock %}
+{% block scripts %}
+<script defer src="{% static 'js/maps.js' %}"></script> 
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
+{% endblock %}
+{% block content %}
+    <article class="popup">
+        <div class="mapa">
+            <img id="img" src="{% static '/images/sugestoes/paulistaBurger.png' %}{{ item.es_icon }}" alt="">          
+            <h3>Paulista Burger</h3>
+            <p>Av. Paulista, 1499 - Consolação, São Paulo - SP</p>
+            <img id="stars" src="{% static '/images/sugestoes/estrelas.png' %}" alt="">
+            <a href="{% url 'role:user_options' %}">
+                <button id="btnPopup">Voltar</button>
+            </a>            
+        </div>               
+        <div  id="location-map"></div>
+    </article>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/reg.css' %}">
+<link rel="stylesheet" href="{% static 'css/contato.css' %}">
+{% endblock %}
+{% block content %}   
+    <section>
+        <form method='POST'>
+            {% csrf_token %}
+            {{ form }}
+            <button type='submit'>Enviar</button>
+            {% if msg %}
+                <h2>{{ msg }}</h2>
+            {% endif %}
+        </form>
+    </section>
+{% endblock %}

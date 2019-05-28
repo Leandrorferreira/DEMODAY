@@ -1,0 +1,14 @@
+myenv/
+.vscode
+__pycache__/
+Python
+db.sqlite3
+.mypy_cache/
+BORA/__pycache__
+BORA/__pycache__/__init__.cpython-37.pyc
+BORA/__pycache__/settings.cpython-37.pyc
+BORA/__pycache__/settings.cpython-37.pyc
+BORA/__pycache__/__init__.cpython-37.pyc
+BORA/__pycache__/__init__.cpython-37.pyc
+BORA/__pycache__/settings.cpython-37.pyc
+

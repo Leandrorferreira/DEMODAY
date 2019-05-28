@@ -1,0 +1,91 @@
+body{
+    background-color: black;
+}
+
+#nav-logado {
+    height: 10vh;
+}
+
+.mapa {
+    grid-area: aside;
+    grid-area: 'aside';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40vw;
+    height: 70vh;    
+    background-color: #b9b6b675;
+    border-radius: 15px;
+    align-items: center;
+    font-family: 'Raleway';
+    margin: 20px;
+    text-align: center;
+}
+
+button{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    color:white;
+    background-color: #ee3f60;
+}
+.mapa h3, p{
+    margin: 0;
+}
+.popup{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 90vh;
+}
+#location-map{
+    position: relative;
+    background-color: white;
+    margin-top: 5vh;
+    border: none;
+    border-radius: 20px;
+    height: 80vh;
+    width: 50vw;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    margin: 0;
+}
+/* Tamanho Tablet */
+@media(max-width:768px){
+    .popup{
+        flex-direction: column;
+    }
+}
+@media(max-width:922px) {
+    #nav-logado {
+        height: 25vh;
+    }
+
+    #location-map {
+        width: 72%;
+        margin: 0;
+        border-radius: none;
+    }     
+    
+    #img, #stars{
+        width: 80px;
+    }
+    .mapa {
+        width: 72vw;
+    }
+}
+
+/* Tamanho Smartphone */
+@media(max-width:425px){   
+    #location-map {
+        width: 90%;
+        margin: 0;
+        border-radius: none;
+    }    
+}

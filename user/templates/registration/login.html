@@ -1,0 +1,28 @@
+</form>
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block content %}   
+<section>        
+    <article id="filtro">    
+        <form method="post">
+            {% csrf_token %}
+            <img src="{% static 'images/logo/boraCurtirCidade.png' %}" alt="">
+            {% for field in form %} 
+            {{ field.label_tag }}
+            {{ field }}
+            {{ field.errors }}
+            {% endfor %}                        
+            <button type="submit">Login</button> 
+            {{ form.non_field_errors }}
+            <div>
+                <a href="{% url 'home:notfound' %}">Esqueceu a senha? </a>          
+                <a href="{% url 'home:index' %}">Voltar</a>           
+                <a href="{% url 'user:reg' %}">Cadastre-se</a>        
+            </div>   
+        </form>    
+    </article>     
+</section>
+{% endblock %}     

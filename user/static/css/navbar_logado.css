@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+}
+
+#nav-logado{
+    height: 25vh;
+    width: 100%;
+    background-image: linear-gradient(to right, #ee3f60 0%, #ee3f60 46%, #f26e57  100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-logado div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+#nav-logado div img{
+    width: 74px;
+    margin-left: 15px;
+}
+
+#nav-logado ul{
+    margin: 6vw;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nav-logado ul li{
+    list-style-type: none;
+}
+
+#nav-logado ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.mostrarUl {
+    display: none !important;
+}
+/* Tamanho Tablet */
+@media(max-width:768px){ 
+    #nav-logado div img {
+        width: 74px;
+        margin-left: 0px;
+    }
+
+    #nav-logado {
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    #nav-logado ul {
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+/* Tamanho Smartphone */
+@media(max-width:425px){
+
+}

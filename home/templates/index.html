@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+{% load staticfiles %}  
+{% block content %}   
+<aside>
+    <img src="{% static '/images/comoFunciona/comoFunciona_ilustra.png' %}" alt="cadastre-se">      
+</aside>
+<article id="comoFunciona">
+    <div>
+        <h2>Como funciona?</h2>
+        <h3>            
+            O BORA trás os melhores rolês pra você!
+        </h3>               
+        <p>
+            Você pode realizar buscas por local ou região
+            de acordo com os seus interesses.
+            Assim, fica mais fácil descobrir qual o rolê mais próximo
+            para se encontrar com a galera e conhecer gente nova.
+            Ta afim de novas aventuras e histórias pra contar? BORA!
+        </p>   
+             
+        <div>
+            <div>           
+                <img src="{% static '/images/comoFunciona/comoFunciona_cadastre.png' %}" alt="cadastre-se">            
+                <p>Cadastre-se</p>
+            </div>
+            <div>            
+                <img src="{% static '/images/comoFunciona/comoFunciona_localizacao.png' %}" alt="Ative sua localização">           
+                <p>Ative sua localização</p>         
+            </div>   
+            <div>            
+                <img src="{% static '/images/comoFunciona/comoFunciona_partiu.png' %}" alt="Escolha o Rolê">          
+                <p>Escolha um rolê</p>
+            </div>            
+        </div>      
+    </div>
+</article>
+<section id="inscreverSe">
+    <div class="filtro">
+        <div>
+            <img class="boraInscreva" src="{% static '/images/logo/boraCurtirCidade.png' %}" alt="">
+            <a href="{%url 'user:reg' %}">
+                <button class="button1">CADASTRE-SE AQUI</button>
+            </a>
+            <a href="{% url 'home:notfound' %}">
+                <button class="button2">CADASTRE-SE COM SUAS REDES SOCIAIS</button>
+            </a>
+        </div>
+    </div>
+</section>   
+{% endblock %}

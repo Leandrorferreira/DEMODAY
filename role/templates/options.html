@@ -1,0 +1,37 @@
+{% extends 'base_logado.html' %}
+{% load staticfiles %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/options.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
+{% endblock %}
+{% block scripts %}
+<script defer src="{% static 'js/maps.js' %}"></script> 
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
+{% endblock %}
+{% block content %}
+<section>
+    <div>
+        <h3>Olá, {{ user.username }}!</h3>
+        <p>Dá uma olhadinha nos rolês que estão acontecendo perto de você!</p>            
+    </div>
+    <div>                
+        <span>
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Sua localização agora:</h3>
+            <p>Estação Hack - Trianon Masp</p>
+        </span>
+    </div>
+</section>
+<article>       
+    {% for item in lista %}            
+    <div class='conteudo'>      
+        <span><i class="fas fa-map-marked-alt"></i></span>
+        <h3>{{ item.es_name }}</h3>
+        <p>{{ item.es_street }}, {{ item.es_number }} - {{ item.es_district }}, {{ item.es_city }} - {{ item.es_state }}</p>
+        <img id="stars" src="{% static '/images/sugestoes/estrelas.png' %}" alt="">
+        <a href="{% url 'role:map_option' %}"><button class="botao">Ver Sugestão</button></a>       
+    </div>            
+    {% endfor %}          
+</article>    
+{% endblock %}

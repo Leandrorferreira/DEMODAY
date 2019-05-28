@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #2d2f33;
+}
+
+/* Section com Texto do Usuário e Localização*/
+
+section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+   
+    height: 50vh;
+}
+
+section div:nth-child(1){
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section div:nth-child(1) h3{
+    margin: 0 0 5px 0;  
+    font-size: 25pt;
+}
+
+section div:nth-child(1) p{
+    margin:0;
+    font-size:12pt;
+    width: 82%;
+}
+
+section div:nth-child(2){
+    width: 59%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section div:nth-child(2) span:nth-child(1) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 100%;
+}
+section div:nth-child(2) span:nth-child(1) i{
+    font-size: 55px;
+    color: #ee3f60;
+}
+
+section div:nth-child(2) div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+section div:nth-child(2) span h3{
+    margin:0;
+    font-size: 20pt;
+}
+
+
+.conteudo span i {
+    font-size: 65pt;
+    padding: 0px;
+    color: azure;
+}
+
+/* Fim da Section*/
+/* ASIDE - Conteudo Principal com DIV dos Rolês*/
+
+article {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.conteudo{
+    width: 60vw;
+    height: 60vh;
+    background-color: #b9b6b675;
+    margin:5px;
+    border-radius: 20px;
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'Raleway';
+}
+
+img {
+    width: 110px;
+}
+
+article .conteudo h3{
+    margin:2px 0 2px 0;
+}
+
+article .conteudo p{
+    margin: 0;
+}
+
+button{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    color:white;
+    background-color: #ee3f60;
+    font-family: 'Raleway';
+}
+
+/* Fim ASIDE*/
+/* MAPA */
+.popup{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+#location-map{
+    position: relative;
+    background-color: white;
+    margin-top: 5vh;
+    border: none;
+    border-radius: 20px;
+    height: 80vh;
+    width: 50vw;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.mapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* FIM MAPA */
+
+/* Tamanho Tablet */
+@media(max-width:768px){ 
+    .conteudo{
+        width: 90vw;
+        height: 60vh;     
+    }
+}
+
+@media(max-width:545px){
+    
+    body {
+        grid-template-rows: 40vh 90vh 450vh;
+    }
+     
+    section{
+        flex-direction: column;        
+        height: 70vh;
+    }
+    
+    section div:nth-child(1){
+        height: 50%;
+    }
+    
+    section div:nth-child(1) p{
+        width: 100%;
+    }
+    
+    section span:nth-child(2){
+        height: 30%;
+    }
+    
+    .conteudo{
+        width: 90vw;
+        height: 60vh;     
+    }
+
+    .conteudo p{
+        font-size: 10pt;
+    }
+    
+    #nav-logado div img {
+        width: 74px;
+        margin-left: 0px;
+    }
+    
+    #nav-logado {
+        flex-direction: column;
+        height: 30vh;
+    }
+    
+    #nav-logado ul {
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    aside {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    
+    .popup{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    #location-map{
+        width: 100%;
+        border-radius: none;
+    }    
+    
+    #localizacao {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #localizacao h3 {
+        font-size: 16pt;
+    }
+    
+    span {
+        padding: 0px;
+        font-size: 45pt;
+    }
+    
+    p {
+        font-size: 12pt;
+    }
+}
+
+
+/* Tamanho Smartphone */
+@media(max-width:425px){
+    section div:nth-child(1){
+        width: 100%;
+    }
+
+    section div:nth-child(2) {
+        width: 100%;
+    }
+
+    section div:nth-child(2) span{
+        width: 100%;
+    }
+
+    section div:nth-child(2) span h3{
+        font-size: 16pt;
+    }
+}

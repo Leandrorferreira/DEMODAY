@@ -1,0 +1,22 @@
+{% extends 'base_logado.html' %}
+{% load staticfiles %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/roles.css' %}"> 
+{% endblock %}
+{% block content %}
+<section>        
+    <article id="container">  
+        <h3>Bora pra onde hoje?!</h3>  
+        {{ msg }} 
+        <form method="post">
+            {% csrf_token %}        
+            {% for field in form %} 
+            {{ field.label_tag }}
+            {{ field }}
+            {{ field.errors }}
+            {% endfor %}         
+            <button type="submit">Cadastrar</button> 
+        </form>
+    </article>     
+</section>
+{% endblock %}
